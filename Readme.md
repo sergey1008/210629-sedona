@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Sergey Gornostaev](https://up.htmlacademy.ru/adaptive/9/user/210629).
-* Наставник: `Неизвестно`.
+* Наставник: [Владимир Цибизов](https://htmlacademy.ru/profile/vlad_blow).
 
 ---
 

@@ -32,13 +32,24 @@
         <section class="forms">
           <form action="/echo" method="post">
             <fieldset>
-              <legend>Представьтесь:</legend>
-              <label for="user-name">Имя:</label>
-              <input id="user-name" type="text" name="user-name" placeholder="Петр" required>
-              <label for="surname">Фамилия:</label>
-              <input id="surname" type="text" name="surname" placeholder="Иванов" required>
-              <label for="surname">Отчество:</label>
-              <input id="middle-name" type="text" name="middle-name" placeholder="Александрович">
+              <div class="user">
+                <legend>Представьтесь:</legend>
+                <label for="user-name">Имя:</label>
+                <input id="user-name" type="text" name="user-name" placeholder="Петр" required>
+                <label for="surname">Фамилия:</label>
+                <input id="surname" type="text" name="surname" placeholder="Иванов" required>
+                <label for="surname">Отчество:</label>
+                <input id="middle-name" type="text" name="middle-name" placeholder="Александрович">
+              </div>
+            </fieldset>
+            <fieldset>
+              <div class="contact">
+                <legend>Контактная информация:</legend>
+                <label for="phone">Контактный телефон:</label>
+                <input class="icon-tel" type="tel" id="tel" name="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="Введите телефон" required>
+                <label for="email">Электронная почта:</label>
+                <input class="icon-email" type="email" id="email" name="email" placeholder="Введите e-mail" required>
+              </div>
             </fieldset>
           </form>
         </section>

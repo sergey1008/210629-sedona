@@ -29,7 +29,18 @@
           <b>Оставьте свой отзыв</b>
           <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </section>
-
+        <section class="forms">
+          <form action="/echo" method="post">
+            <fieldset>
+              <legend>Представьтесь:</legend>
+              <label for="user-name">Имя:</label>
+              <input id="user-name" type="text" name="user-name" placeholder="Петр" required>
+              <label for="surname">Фамилия:</label>
+              <input id="surname" type="text" name="surname" placeholder="Иванов" required>
+              <label for="surname">Отчество:</label>
+              <input id="middle-name" type="text" name="middle-name" placeholder="Александрович">
+            </fieldset>
+          </form>
         </section>
       </div>
     </main>

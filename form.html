@@ -32,10 +32,10 @@
         <section class="forms">
           <form action="/echo" method="post">
             <fieldset>
-              <div class="user">
+              <div class="form-user">
                 <legend>Представьтесь:</legend>
                 <label for="user-name">Имя:</label>
-                <input id="user-name" type="text" name="user-name" placeholder="Петр" required>
+                <input id="user-name" type="text" name="user-name" placeholder="Петр" required autofocus>
                 <label for="surname">Фамилия:</label>
                 <input id="surname" type="text" name="surname" placeholder="Иванов" required>
                 <label for="surname">Отчество:</label>
@@ -43,13 +43,28 @@
               </div>
             </fieldset>
             <fieldset>
-              <div class="contact">
+              <div class="form-contact">
                 <legend>Контактная информация:</legend>
                 <label for="phone">Контактный телефон:</label>
                 <input class="icon-tel" type="tel" id="tel" name="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="Введите телефон" required>
+                <span class="contact__error">Ошибка, перепроверьте номер</span>
                 <label for="email">Электронная почта:</label>
                 <input class="icon-email" type="email" id="email" name="email" placeholder="Введите e-mail" required>
               </div>
+            </fieldset>
+
+            <fieldset>
+              <div class="form-feeling">
+                <input type="radio" value="variant" name="positiv" id="positiv" checked>
+                <label for="positiv">Скорее положительное</label>
+
+                <input type="radio" value="variant" name="negativ" id="negativ">
+                <label for="negativ">Скорее отрицательное</label>
+
+                <input type="radio" value="variant" name="answer" id="answer">
+                <label for="answer">Скорее отрицательное</label>
+              </div>
+
             </fieldset>
           </form>
         </section>

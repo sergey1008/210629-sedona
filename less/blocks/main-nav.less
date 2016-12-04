@@ -57,9 +57,10 @@
 }
 
 .main-nav__closed {
-  position: relative;
+  position: absolute;
+  z-index: 1;
   top: 10px;
-  right: 10px;
+  right: 30px;
   width: 24px;
   height: 24px;
   font-size: 0;
@@ -88,7 +89,42 @@
   transform: rotate(-45deg);
 }
 
-.main-header__logo img {
+.main-header__logo a {
   position: relative;
-  left: 50%;
+  z-index: 1;
+  height: 56px;
+  transform: scale(0.6);
+}
+
+.main-nav__open {
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  right: 30px;
+  width: 25px;
+  height: 3px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.main-nav__open::before,
+.main-nav__open::after {
+  content: "";
+  position: absolute;
+
+  left: 20px;
+  width: 19px;
+  height: 3px;
+  background-color: @blue-color;
+}
+
+.main-nav__open::before {
+  top: -66px;
+}
+
+.main-nav__open::after {
+  bottom: 60px;
 }

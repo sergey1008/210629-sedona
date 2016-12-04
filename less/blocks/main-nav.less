@@ -1,6 +1,7 @@
 .main-nav {
   width: 320px;
   margin: 0 auto;
+  position: relative;;
 }
 
 .main-nav__list,
@@ -44,6 +45,7 @@
   inset 0px 1px 1px 1px #9ac2db,
   inset 0 -3px 6px -1px #678fa8;
 }
+
 @media @tablet-widths {
   .main-nav {
     width: auto;
@@ -52,12 +54,12 @@
   }
   .container();
   .clearfix();
-  }
 }
+
 /*.main-nav__closed {
-  position: absolute;
-  top: 5px;
-  right: 205px;
+  position: relative;
+  top: 10px;
+  right: 10px;
   width: 24px;
   height: 24px;
   font-size: 0;
@@ -71,8 +73,8 @@
 .main-nav__closed::after {
   content: "";
   position: absolute;
-  top: 10;
-  left: 2px;
+  top: 10px;
+  left: 20px;
   width: 19px;
   height: 3px;
   background-color: @white-color;
@@ -83,5 +85,10 @@
 }
 
 .main-nav__closed::after {
-  transform: rotate(-45deg); */
+  transform: rotate(-45deg);
+}
+
+.main-header__logo img {
+  position: relative;
+  left: 50%;
 }

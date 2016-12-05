@@ -8,21 +8,23 @@
   <body>
 
     <header class="main-header">
-      <nav class="main-nav main-nav__closed">
-        <div class="container clearfix">
+      <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <button class="main-nav__closed" type="button" title="Закрыть">Закрыть</button>
           <ul class="main-nav__list">
             <li class="main-nav__item"><a href="#">Главная</a></li>
             <li class="main-nav__item"><a href="#">Фото и видео</a></li>
-            <li class="main-nav__item main-nav__item--active"><a href="#">Форма отзыва</a></li>
+            <li class="main-nav__item main-nav__link--active"><a href="#">Форма отзыва</a></li>
             <li class="main-nav__item"><a href="#">HTML ACADEMY</a></li>
           </ul>
-        </div>
-          <div class="index-logo">
-            <a class="index-logo logo__link" href="index.html"><img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип"></a>
-          </div>
+          <div class="main-header__logo">
+            <a class="main-header__logo--link" href="index.html"><img src="img/logo-sedona-mobile.svg" width="150" height="100" alt="Логотип"></a>
           <button class="main-nav__open" type="button">Открыть меню</button>
+        </div>
+      </div>
       </nav>
     </header>
+
     <main class="main-page">
         <section class="inner-intro">
           <div class="container clearfix">

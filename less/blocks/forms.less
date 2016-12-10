@@ -2,3 +2,44 @@
   .container();
   .clearfix();
 }
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.form__user--legend {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 25px;
+}
+
+.form__user--name {
+  display: block;
+  text-transform: uppercase;
+  float: left;
+  font-size: 14px;
+  line-height: 26px;
+  vertical-align: middle;
+}
+
+.form__user--name input[type="text"] {
+  display: block;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  border: none;
+  background-color: #e5e5e5;
+  color: @black-color;
+  min-width: 100px;
+}
+
+.form__user--name input[type="text"] {
+  float: right !important;
+}

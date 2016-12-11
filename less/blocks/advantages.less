@@ -1,5 +1,6 @@
 .advantages {
   .container();
+  .clearfix();
 }
 .icon-house {
 background-image: url(../img/icon-house.svg) no-repeat;
@@ -87,4 +88,60 @@ background-image: url(../img/icon-house.svg) no-repeat;
     margin-top: 20px;
     margin-bottom: 40px;
   }
+}
+
+@media @tablet-widths {
+  .advantages-item {
+    min-height: 175px;
+  }
+  .advantages-name--color:nth-child(1) {
+    float: left;
+    width: 255px;
+    margin-top: 0;
+  }
+
+  .advantages img {
+    display: block;
+    width: 442px;
+    height: 255px;
+  }
+
+  .advantages-sublist {
+    min-height: 330px;
+    margin: 0;
+    padding: 0;
+  }
+  .advantages-subitem {
+    float: left;
+    width: 166px;
+    margin-top: 55px;
+    padding-top: 105px;
+  }
+  .advantages-subitem:nth-child(1) {
+    margin-left: 25px;
+  }
+  .advantages-subitem:nth-child(2) {
+    margin-left: 80px;
+    width: 140px;
+  }
+  .advantages-subitem:nth-child(3) {
+    margin-left: 80px;
+    margin-right: 0;
+  }
+
+  .advantages-subname {
+    display: block;
+    text-align: center;
+  }
+
+  .advantages-subtext {
+    text-align: center;
+  }
+  .advantages-name--color {
+    float: right;
+    width: 255px;
+    margin-top: 0;
+  }
+
+
 }

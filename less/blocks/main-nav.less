@@ -1,0 +1,138 @@
+.main-nav {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.main-nav__list,
+.main-nav__item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  background-color: @blue-color;
+  a {
+    display: block;
+    font-family: @font-face;
+    color: @white-color;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 40px;
+    font-style: @font-bold;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow:
+    inset 0 2px 0px -1px #678fa8,
+    inset 0px 1px 1px 1px #9ac2db;
+  }
+}
+
+.main-nav__item:nth-child(1) a {
+  box-shadow: none;
+}
+
+.main-nav__item:nth-last-child(1) a {
+  box-shadow:
+  inset 0 2px 0px -1px #678fa8,
+  inset 0px 1px 1px 1px #9ac2db,
+  inset 0 -3px 6px -1px #678fa8;
+}
+
+.main-nav__closed {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: 30px;
+  width: 24px;
+  height: 24px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.main-nav__closed::before,
+.main-nav__closed::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 19px;
+  height: 3px;
+  background-color: @white-color;
+}
+
+.main-nav__closed::before {
+  transform: rotate(45deg);
+}
+
+.main-nav__closed::after {
+  transform: rotate(-45deg);
+}
+
+.main-header__logo a {
+  position: relative;
+  z-index: 1;
+  height: 56px;
+  transform: scale(0.6);
+}
+
+.main-nav__open {
+  position: absolute;
+  z-index: 1;
+  bottom: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  box-sizing: content-box;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.main-nav__open::before,
+.main-nav__open::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  width: 20px;
+  height: 3px;
+  background-color: @blue-color;
+}
+
+.main-nav__open::before {
+  top: 10px;
+}
+
+.main-nav__open::after {
+  bottom: 10px;
+}
+
+@media @tablet-widths {
+  .main-nav {
+    width: auto;
+    min-height: 56px;
+    margin: 0;
+  }
+  .main-nav__list {
+    min-height: 56px;
+    width: 700px;
+  }
+  .main-nav li {
+    float: left;
+  }
+  .container();
+  .clearfix();
+}
+
+@media @desktop-widths {
+  .main-nav__list {
+    width: 1200px;
+  }
+}

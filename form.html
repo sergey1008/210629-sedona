@@ -3,29 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
     <header class="main-header">
-      <nav class="main-nav main-nav__closed">
-        <div class="container clearfix">
-          <ul class="nav-list">
-            <li class="nav-list__item"><a href="#">Главная</a></li>
-            <li class="nav-list__item"><a href="#">Фото и видео</a></li>
-            <li class="nav-list__item nav__item--active"><a href="#">Форма отзыва</a></li>
-            <li class="nav-list__item"><a href="#">HTML ACADEMY</a></li>
+      <nav class="main-nav">
+          <button class="main-nav__closed" type="button" title="Закрыть">Закрыть</button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="#">Главная</a></li>
+            <li class="main-nav__item"><a href="#">Фото и видео</a></li>
+            <li class="main-nav__item main-nav__link--active"><a href="#">Форма отзыва</a></li>
+            <li class="main-nav__item"><a href="#">HTML ACADEMY</a></li>
+              <button class="main-nav__open" type="button">Открыть меню</button>
           </ul>
+          <div class="main-header__logo">
+            <a class="main-header__logo--link" href="index.html"><img src="img/logo-sedona-mobile.svg" width="320" height="" alt="Логотип"></a>
         </div>
-          <div class="index-logo">
-            <a class="index-logo logo__link" href="index.html"><img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип"></a>
-          </div>
-          <button class="main-nav__open" type="button">Открыть меню</button>
       </nav>
     </header>
-    <main class="main-page">
+
+    <main class="inner-page-main">
         <section class="inner-intro">
-          <div class="container clearfix">
-          <img src="http://placehold.it/150x100" width="150" height="100" alt="Вид на горы">
+        <img src="img/bg-back-mobile@1x.jpg" width="280" height="280" alt="Вид на горы">
+        <div class="wrapper">
           <b>Оставьте свой отзыв</b>
           <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
@@ -33,26 +34,35 @@
         <section class="forms">
           <form action="/echo" method="post">
             <fieldset>
-              <div class="form-user">
-                <div class="container clearfix">
-                  <legend>Представьтесь:</legend>
-                  <label for="user-name">Имя:</label>
-                  <input id="user-name" type="text" name="user-name" placeholder="Петр" required autofocus>
-                  <label for="surname">Фамилия:</label>
-                  <input id="surname" type="text" name="surname" placeholder="Иванов" required>
-                  <label for="surname">Отчество:</label>
-                  <input id="middle-name" type="text" name="middle-name" placeholder="Александрович">
+                <div class="wrapper">
+                  <legend class="form__user--legend">Представьтесь:</legend>
+
+                  <div class="form__user--name">
+                    <label class="form__user--left" for="user-name">Имя<sup>*</sup>:</label>
+                    <input class="form__user--right" id="user-name" type="text" name="user-name" placeholder="Петр" required autofocus>
+                  </div>
+
+                  <div class="form__user--surname">
+                    <label for="surname">Фамилия<sup>*</sup>:</label>
+                    <input id="surname" type="text" name="surname" placeholder="Иванов" required>
+                  </div>
+
+                  <div class="form__user--middle-name">
+                    <label for="middle-name">Отчество:</label>
+                    <input id="middle-name" type="text" name="middle-name" placeholder="Александрович">
+                  </div>
+
                 </div>
-              </div>
+
             </fieldset>
             <fieldset>
               <div class="form-contact">
-                <div class="container clearfix">
+                <div class="wrapper">
                   <legend>Контактная информация:</legend>
-                  <label for="phone">Контактный телефон:</label>
+                  <label for="phone">Контактный телефон<sup>*</sup>:</label>
                   <input class="icon-tel" type="tel" id="tel" name="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="Введите телефон" required>
                   <span class="contact__error">Ошибка, перепроверьте номер</span>
-                  <label for="email">Электронная почта:</label>
+                  <label for="email">Электронная почта<sup>*</sup>:</label>
                   <input class="icon-email" type="email" id="email" name="email" placeholder="Введите e-mail" required>
                 </div>
               </div>
@@ -60,7 +70,7 @@
 
             <fieldset>
               <div class="form-feeling">
-                <div class="container clearfix">
+                <div class="wrapper">
                   <input type="radio" value="variant" name="variant" id="positiv" checked>
                   <label for="positiv">Скорее положительное</label>
 
@@ -74,7 +84,7 @@
             </fieldset>
             <fieldset>
               <div class="form-lions">
-                <div class="container clearfix">
+                <div class="wrapper">
                   <input type="checkbox" value="" name="bridge" id="bridge" checked>
                   <label for="bridge">Мост Дьявола</label>
 
@@ -92,7 +102,7 @@
 
             <fieldset>
               <div class="form-commit">
-                <div class="container clearfix">
+                <div class="wrapper">
                 <label for="review">Опишите свои эмоции:</label>
                 <textarea type="texteria" id="review" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
               </div>
@@ -107,7 +117,7 @@
         </section>
     </main>
     <footer class="inner-footer">
-      <div class="container clearfix">
+      <div class="wrapper">
         <section class="footer-hashtag">
           <a href="#">#Visitsedona</a>
         </section>
@@ -125,7 +135,7 @@
     </footer>
 
     <div class="modal-content modal-content__error">
-      <div class="container clearfix">
+      <div class="wrapper">
         <b>Что-то пошло не так!</b>
         <p>Проверте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         <button class="modal-content-close" type="button" title="Закрыть">Ок</button>
@@ -133,7 +143,7 @@
     </div>
 
     <div class="modal-content modal-content__commit">
-      <div class="container clearfix">
+      <div class="wrapper">
         <b>Ваш отзыв отправлен!</b>
         <p> Спасибо за ваше участие, ваш отзыв уже поступил к нам.
       В ближайшее время мы опубликуем его на сайте.</p>

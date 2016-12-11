@@ -1,0 +1,45 @@
+.clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.container() {
+  width: 320px;
+  margin: 0 auto;
+
+
+  @media @tablet-widths {
+    width: 640px;
+  }
+
+  @media @desktop-widths {
+    width: 960px;
+  }
+}
+
+.no-outline() {
+  outline: none;
+  background: transparent;
+
+  &::before {
+    display: none;
+  }
+}
+
+.list-reset() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.text-reset() {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  padding: 0 20px;
+  margin: 0 auto;
+}

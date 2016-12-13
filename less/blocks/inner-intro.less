@@ -1,38 +1,86 @@
-.inner-page-main {
+.inner-intro {
   .container();
   .clearfix();
 }
+
 .inner-intro {
   margin-bottom: 22px;
   border-bottom: 1px solid #e5e5e5;
+  p {
+    text-align: center;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+    font-weight: lighter;
+  }
+
+  b {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+  }
+
+  img {
+    display: block;
+    width: 320px;
+    height: 160px;
+    background-image: url(../img/bg-back-mobile@1x.jpg);
+    background-repeat: no-repeat;
+    background-size: ;
+    margin-bottom: 40px;
+  }
+
+
 }
 
-.inner-intro img {
-  display: block;
+.inner-intro .inner-intro__img {
   width: 320px;
-  background-image: url(../img/text-sedona.svg);
+  height: 160px;
+  background-image: url(../img/bg-back-mobile@1x.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: ;
   margin-bottom: 40px;
 }
 
-.inner-intro b {
-  display: block;
-  text-align: center;
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
-  margin-bottom: 35px;
-}
+@media @tablet-widths {
 
-.inner-intro p {
-  text-align: center;
-  font-size: 14px;
-  line-height: 26px;
-  text-transform: uppercase;
-  font-weight: lighter;
-}
+  .inner-intro {
+    border-bottom: 0;
 
-.inner-intro h1 {
+
+  .inner-intro__img {
+    width: 768px;
+    height: 290px;
+    background: url(../img/bg-back-mobile@1x.jpg) no-repeat;
+    background-position: 0 0;
+    left: -30px;
+    background-size: cover;
+    }
+
+  }
+}
+.inner-intro-text {
+  b {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    line-height: 26px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    }
+}
+@media @desktop-widths {
+
+  .inner-intro .inner-intro__img {
+    width: 1200px;
+    background: url(../img/bg-back-mobile@1x.jpg) no-repeat;
+    //background-position: 0 0;
+    //left: -30px;
+    //background-size: cover;
+  }
+
 
 }

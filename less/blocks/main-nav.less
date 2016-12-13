@@ -111,6 +111,7 @@
 
 @media @tablet-widths {
   .main-nav {
+    width: 768px;
     min-height: 56px;
   }
   .main-nav__list {
@@ -122,6 +123,9 @@
     padding: 0;
     background-color: @white-color;
     min-height: 56px;
+    li {
+      min-height: 56px;
+    }
     a {
       margin: 0;
       padding: 0;
@@ -129,8 +133,6 @@
       font-size: 14px;
       line-height: 26px;
       min-height: 56px;
-      padding-top: 20px;
-      padding-bottom: 20px;
       border: 0;
       box-shadow: none;
       color: @black-color;
@@ -160,8 +162,10 @@
   .clearfix();
 }
 
+
 @media @desktop-widths {
-  .main-nav__list {
-    width: 1200px;
+  .main-nav {
+    width: 100%;
+    min-height: 56px;
   }
 }

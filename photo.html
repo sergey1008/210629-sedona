@@ -39,16 +39,17 @@
         </header>
 
       <main class="inner-page-main">
-      <article class="post-photo">
-
+      <article class="post-photo__top">
+        <div class="wrapper">
             <img src="img/photo-1-mobile@1x.jpg" width="280" height="280" alt="Дорога в даль">
             <div class="post-photo__info">
             <b class="post-photo__name">Не родные просторы</b>
             <span class="post-photo__writer">Автор фото: Борис</span>
             <span class="post-photo__like icon-like">1350</span>
           </div>
-
+        </div>
       </article>
+<div class="flex-container">
       <article class="post-photo">
         <div class="wrapper">
             <img src="img/photo-2-mobile@1x.jpg" width="280" height="280" alt="Местная растительность">
@@ -57,10 +58,12 @@
             <span class="post-photo__writer">Автор фото: Сергей</span>
             <span class="post-photo__like icon-like">143</span>
           </div>
-        </div>
+      </div>
       </article>
+
       <article class="post-photo">
         <div class="wrapper">
+
             <img src="img/photo-3-mobile@1x.jpg" width="280" height="280" alt="Дорога на север">
             <div class="post-photo__info">
             <b class="post-photo__name">Дорога на север</b>
@@ -68,9 +71,11 @@
             <span class="post-photo__like icon-like">96</span>
           </div>
         </div>
+
       </article>
       <article class="post-photo">
         <div class="wrapper">
+
             <img src="img/photo-4-mobile@1x.jpg" width="280" height="280" alt="Мост Дьявола">
             <div class="post-photo__info">
             <b class="post-photo__name">Мост Дьявола</b>
@@ -78,41 +83,47 @@
             <span class="post-photo__like icon-like">254</span>
           </div>
         </div>
+
       </article>
+</div>
       <section class="promo-video">
         <div class="wrapper">
-          <b class="promo-video__name">Все еще сомневаетесь</b>
+          <b class="promo-video__name">Все еще сомневаетесь?</b>
           <p class="promo-video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         </div>
-        <div class="promo-video">
-          <img class="promo-video__player" src="img/video-mobile@1x.jpg" width="320px" height="200" alt="">
+        <div class="promo-video__player">
+          <div class="wrapper">
+          <img class="promo-video__player--img" src="img/video-mobile@1x.jpg" width="320px" height="200" alt="">
           <div class=""><img src="img/icon-video-replay.svg"></div>
           <div class=""><img src="img/icon-video-subtitles.svg"></div>
           <div class=""><img src="img/icon-video-fullscreen.svg"></div>
         </div>
+      </div>
       </section>
     </main>
 
     <footer class="main-footer">
+      <div class="flex-container">
         <section class="footer-hashtag">
-          <div class="wrapper">
+
           <a href="#">#Visitsedona</a>
-        </div>
+
         </section>
         <section class="footer-social">
-          <div class="wrapper">
+
             <a class="social-btn social-btn-tv" href="#">Твитер</a>
             <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
             <a class="social-btn social-btn-yt" href="#">Ютуб</a>
-          </div>
+
         </section>
 
         <section class="footer-copyright">
-          <div class="wrapper">
+
             <p>Разработано</p>
             <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
-          </div>
+
         </section>
+      </div>
     </footer>
   </body>
 </html>

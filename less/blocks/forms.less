@@ -6,40 +6,192 @@
 fieldset {
   margin: 0;
   padding: 0;
+  margin-top: 25px;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 }
 
-.form__user--legend {
-  display: block;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 26px;
-  margin-bottom: 25px;
-}
+/* сломало меню
+ul {
+  width: 320px;
+  padding: 0;
+  margin: 0;
+  li {
+    display: inline-block;
+  }
+}*/
 
-.form__user--name {
-  display: block;
-  text-transform: uppercase;
-  float: left;
-  font-size: 14px;
-  line-height: 26px;
-  vertical-align: middle;
-}
-
-.form__user--name input[type="text"] {
-  display: block;
-  padding: 20px;
-  margin-bottom: 20px;
-  margin-left: 10px;
-  border: none;
-  background-color: #e5e5e5;
+input::-webkit-input-placeholder {
   color: @black-color;
-  min-width: 100px;
+  font-size: 18px;
+  font-weight: bold;
+ }
+
+.form__user {
+  list-style: none;
+  border-bottom: 1px solid #e5e5e5;
+  .form__user--legend {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 25px;
+    padding: 0 50px;
+  }
+
+  .form__user--name,
+  .form__user--surname,
+  .form__user--middle-name {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 26px;
+    vertical-align: middle;
+  }
+
+  .form__user--name input[type="text"],
+  .form__user--surname input[type="text"],
+  .form__user--middle-name input[type="text"] {
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    border: none;
+    background-color: #e5e5e5;
+    color: @black-color;
+  }
+
+  .form__user--name input[type="text"]:nth-of-type(1) {
+    width: 190px;
+  }
+  .form__user--surname input[type="text"]:nth-of-type(1) {
+    width: 140px;
+  }
+  .form__user--middle-name input[type="text"]:nth-of-type(1) {
+    width: 141px;
+    margin-bottom: 25px;
+  }
+
+  .form__user--left {
+    display: block;
+    text-transform: uppercase;
+    float: left;
+    font-size: 14px;
+    line-height: 26px;
+    line-height: 50px;
+  }
+
 }
 
-.form__user--name input[type="text"] {
-  float: right !important;
+.form-contact {
+  margin-bottom: 27px;
+  .form-contact__name {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin: 0 auto;
+  }
+  .form-contact__phone {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  /*.icon-tel {
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    top: 0;
+    right: 0;
+    background-color: #e6e6e6;
+
+  }
+  .icon-tel:before {
+    content: "";
+
+  }*/
+
+  input[type="tel"],
+  input[type="email"] {
+    padding: 20px;
+    width: 240px;
+    background-color: #e5e5e5;
+    border: 0;
+    margin-bottom: 12px;
+  }
+
+  .contact__error {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 26px;
+    color: #ff5c5c;
+    margin-bottom: 24px;
+  }
+
+  .form-contact__email {
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 26px;
+
+  }
+  label,
+  span {
+    padding-left: 22px;
+  }
+}
+
+.form-feeling {
+  margin-bottom: 25px;
+  .form-feeling__name {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 14px;
+    margin-bottom: 30px;
+  }
+  .form-feeling__variant {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 26px;
+    color: @black-color;
+    padding: 20px;
+  }
+
+}
+
+.form-lions {
+  margin-bottom: 25px;
+  legend {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 14px;
+    margin-bottom: 30px;
+
+  }
+  label {
+    display: inline-block;
+    width: 240px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    padding-left: 25px;
+  }
 }

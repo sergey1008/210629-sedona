@@ -30,72 +30,76 @@
         </section>
           </header>
         <main class="inner-page-main">
+
+
         <section class="forms">
           <form action="/echo" method="post">
+
             <fieldset>
+              <ul class="form__user">
                 <div class="wrapper">
-                  <legend class="form__user--legend">Представьтесь:</legend>
-
-                  <div class="form__user--name">
-                    <label class="form__user--left" for="user-name">Имя<sup>*</sup>:</label>
-                    <input class="form__user--right" id="user-name" type="text" name="user-name" placeholder="Петр" required autofocus>
-                  </div>
-
-                  <div class="form__user--surname">
-                    <label for="surname">Фамилия<sup>*</sup>:</label>
-                    <input id="surname" type="text" name="surname" placeholder="Иванов" required>
-                  </div>
-
-                  <div class="form__user--middle-name">
-                    <label for="middle-name">Отчество:</label>
-                    <input id="middle-name" type="text" name="middle-name" placeholder="Александрович">
-                  </div>
-
+                  <li><legend class="form__user--legend">Представьтесь:</legend></li>
+                  <li class="form__user--name">
+                  <label class="form__user--left" for="user-name">Имя<sup>*</sup>:</label>
+                  <input class="form__user--right" id="user-name" type="text" name="user-name" placeholder="Петр" required autofocus></li>
+                  <li class="form__user--surname">
+                  <label for="surname">Фамилия<sup>*</sup>:</label>
+                  <input id="surname" type="text" name="surname" placeholder="Иванов" required></li>
+                  <li class="form__user--middle-name">
+                  <label for="middle-name">Отчество:</label>
+                  <input id="middle-name" type="text" name="middle-name" placeholder="Александрович"></li>
                 </div>
+              </ul>
 
             </fieldset>
-            <fieldset>
-              <div class="form-contact">
-                <div class="wrapper">
-                  <legend>Контактная информация:</legend>
-                  <label for="phone">Контактный телефон<sup>*</sup>:</label>
-                  <input class="icon-tel" type="tel" id="tel" name="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="Введите телефон" required>
-                  <span class="contact__error">Ошибка, перепроверьте номер</span>
-                  <label for="email">Электронная почта<sup>*</sup>:</label>
-                  <input class="icon-email" type="email" id="email" name="email" placeholder="Введите e-mail" required>
+              <fieldset>
+                <div class="form-contact">
+                  <div class="wrapper">
+                    <legend class="form-contact__name">Контактная информация:</legend>
+                    <label class="form-contact__phone" for="phone">Контактный телефон<sup>*</sup>:</label>
+                    <input class="icon-tel" type="tel" id="tel" name="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="Введите телефон" required>
+                    <span class="contact__error">Ошибка, перепроверьте номер</span>
+                    <label class="form-contact__email" for="email">Электронная почта<sup>*</sup>:</label>
+                    <input class="icon-email" type="email" id="email" name="email" placeholder="Введите e-mail" required>
+                  </div>
                 </div>
-              </div>
             </fieldset>
 
             <fieldset>
               <div class="form-feeling">
-                <div class="wrapper">
-                  <input type="radio" value="variant" name="variant" id="positiv" checked>
-                  <label for="positiv">Скорее положительное</label>
-
-                  <input type="radio" value="variant" name="variant" id="negativ">
-                  <label for="negativ">Скорее отрицательное</label>
-
-                  <input type="radio" value="variant" name="variant" id="answer">
-                  <label for="answer">Скорее отрицательное</label>
-                </div>
+                <legend class="form-feeling__name">Ваше общее впечатление:</legend>
+                <ul>
+                  <div class="wrapper">
+                    <li><input type="radio" value="variant" name="variant" id="positiv" checked>
+                    <label class="form-feeling__variant" for="positiv">Скорее положительное</label></li>
+                    <li><input type="radio" value="variant" name="variant" id="negativ">
+                    <label class="form-feeling__variant"
+                    for="negativ">Скорее отрицательное</label></li>
+                    <li><input type="radio" value="variant" name="variant" id="answer">
+                    <label class="form-feeling__variant" for="answer">Скорее отрицательное</label></li>
+                  </div>
+              </ul>
               </div>
             </fieldset>
+
             <fieldset>
               <div class="form-lions">
+                <legend class="form-feeling__name">Посещенные достопримечательности:</legend>
+                <ul>
                 <div class="wrapper">
-                  <input type="checkbox" value="" name="bridge" id="bridge" checked>
-                  <label for="bridge">Мост Дьявола</label>
+                  <li><input type="checkbox" value="" name="bridge" id="bridge" checked>
+                  <label for="bridge">Мост Дьявола</label></li>
 
-                  <input type="checkbox" value="" name="park" id="park" checked>
-                  <label for="park">Слайд-парк</label>
+                  <li><input type="checkbox" value="" name="park" id="park" checked>
+                  <label for="park">Слайд-парк</label></li>
 
-                  <input type="checkbox" value="" name="mountain" id="mountain">
-                  <label for="mountain">Гора-Колокол</label>
+                  <li><input type="checkbox" value="" name="mountain" id="mountain">
+                  <label for="mountain">Гора-Колокол</label></li>
 
-                  <input type="checkbox" value="" name="rock" id="rock" checked>
-                  <label for="rock">Красные скалы</label>
+                  <li><input type="checkbox" value="" name="rock" id="rock" checked>
+                  <label for="rock">Красные скалы</label></li>
                 </div>
+              </ul>
               </div>
             </fieldset>
 

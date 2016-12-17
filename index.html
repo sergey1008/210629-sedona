@@ -13,9 +13,11 @@
     <header class="main-header">
 
       <nav class="main-nav">
+<button class="main-nav__closed" type="button" title="Закрыть">Закрыть</button>
+        <div class="main-nav__wrapper">
           <ul class="main-nav__list">
 
-            <button class="main-nav__closed" type="button" title="Закрыть">Закрыть</button>
+
             <li class="main-nav__item main-nav__link--active"><a href="#">Главная</a></li>
             <li class="main-nav__item"><a href="#">Фото и видео</a></li>
             <li class="main-nav__item"><a href="#">Форма отзыва</a></li>
@@ -28,36 +30,38 @@
             <a class="main-header__logo--link" href="index.html"><img src="img/logo-sedona-mobile.svg" width="150" height="100" alt="Логотип"></a>
         </div>
         <button class="main-nav__open" type="button">Открыть меню</button>
+      </div>
       </nav>
 
       <section class="intro">
+        <div class="intro__wrapper">
         <div class="intro-img">
           <img class="intro-img__top" src="img/text-sedona-index.svg" width="" height="" alt="">
         </div>
         <div class="intro-text">
-          <div class="wrapper">
+          <div class="intro-text__wrapper">
           <h1>Седона &ndash; небольшой городок в Аризоне, заслуживающий большего!</h1>
           <p>Рассмотрим 5 причин, по которым Седона круче чем Гранд Каньен!</p>
         </div>
         </div>
+      </div>
       </section>
       </header>
 
       <main class="main-page">
-        <section class="advantages">
+
+        <section class="advantages-top">
           <div class="advantages-list">
-            <div class="advantages-item advantages-name--color">
-              <div class="wrapper">
+            <div class="advantages-item">
               <b class="advantages-name">Настоящий Городок</b>
               <div class="advantages-number">&ndash; №1 &ndash;</div>
               <p class="advantages-text">Седона &ndash; не аттракцион для туристов, там течет своя жизнь</p>
             </div>
+            <img src="img/photo-city@1x.jpg" width="320" height="260" alt="Фото города">
             </div>
-          </div>
-          <img src="img/photo-city@1x.jpg" width="320" height="260" alt="Фото города">
         </section>
 
-          <section class="advantages">
+          <section class="advantages-sub">
               <div class="advantages-sublist">
 
                   <div class="advantages-subitem">
@@ -65,50 +69,61 @@
                     <b class="advantages-subname">Жилье</b>
                     <p class="advantages-subtext">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                   </div>
-                  <div class="advantages-subitem">
-                    <span class="icon icon-gift"></span>
-                    <b class="advantages-subname">Сувениры</b>
-                    <p class="advantages-subtext">Не только китайского, но и местного производства!</p>
-                  </div>
+
                   <div class="advantages-subitem">
                   <span class="icon icon-burger"></span>
                   <b class="advantages-subname">Еда</b>
                   <p class="advantages-subtext">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
                 </div>
+
+                <div class="advantages-subitem">
+                  <span class="icon icon-gift"></span>
+                  <b class="advantages-subname">Сувениры</b>
+                  <p class="advantages-subtext">Не только китайского, но и местного производства!</p>
+                </div>
               </div>
+            </section>
 
-            <div class="advantages-item advantages-name--color">
-              <div class="wrapper">
+          <section class="advantages-bottom">
+            <div class="advantages-list">
+              <div class="advantages-item">
                 <b class="advantages-name">Там есть мост дьявола</b>
-                  <div class="advantages-number">&ndash; №2 &ndash;</div>
+                <div class="advantages-number">&ndash; №2 &ndash;</div>
                 <p class="advantages-text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-            </div>
-</div>
-              <img src="img/photo-4-mobile@1x.jpg" width="320" height="260" alt="Фото моста">
+              </div>
+                  <img src="img/photo-4-mobile@1x.jpg" width="320" height="260" alt="Фото моста">
+                </div>
+          </section>
 
 
-          <div class="advantages-list">
-                <div class="advantages-item advantages-item--line">
+
+          <section class="advantages-block">
+            <div class="advantages-items">
+
+                <div class="advantages-item">
                   <b class="advantages-name">Небольшая площадь</b>
                     <div class="advantages-number">&ndash; №3 &ndash;</div>
                   <p class="advantages-text">Все достопримеча<wbr>тельности находятся очень близко</p>
                 </div>
-                <div class="advantages-item advantages-item--line">
+
+                <div class="advantages-item">
                   <b class="advantages-name">Красивая дорога</b>
                     <div class="advantages-number">&ndash; №4 &ndash;</div>
                   <p class="advantages-text">Ехать в Седону из Лас&ndash;Вегаса совсем не скучно!</p>
                 </div>
-                <div class="advantages-item advantages-item--line">
+
+                <div class="advantages-item">
                   <b class="advantages-name">Мало туристов</b>
                     <div class="advantages-number">&ndash; №5 &ndash;</div>
                   <p class="advantages-text">Большинство едет в Гранд Каньон и толпится там</p>
                 </div>
-            </div>
+
+              </div>
 
         </section>
 
         <section class="search">
-          <div class="wrapper">
+          <div class="search-wrapper">
           <b class="search-name">Заинтересовались?</b>
           <p class="search-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a href="#" class="btn btn-search">Найти гостиницу</a>

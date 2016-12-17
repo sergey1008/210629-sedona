@@ -1,6 +1,6 @@
 .inner-intro {
   .container();
-  .clearfix();
+  // .clearfix();
 }
 
 .inner-intro {
@@ -14,7 +14,7 @@
     font-weight: lighter;
   }
 
-  b {
+  .inner-intro__name {
     display: block;
     text-align: center;
     font-size: 18px;
@@ -24,16 +24,19 @@
   }
 
   img {
-    display: block;
-    width: 320px;
-    height: 160px;
-    background-image: url(../img/bg-back-mobile@1x.jpg);
-    background-repeat: no-repeat;
-    background-size: ;
-    margin-bottom: 40px;
+    display: flex;
+    width: 230px;
+
+    // height: 160px;
+    margin: 0 auto;
+    padding-top: 60px;
+
+    // background-image: url(../img/bg-back-mobile@1x.jpg);
+    // background-repeat: no-repeat;
+    // background-position: 50% 80%;
+    // margin-bottom: 40px;
+    // padding: 0 20px;
   }
-
-
 }
 
 .inner-intro .inner-intro__img {
@@ -41,7 +44,7 @@
   height: 160px;
   background-image: url(../img/bg-back-mobile@1x.jpg);
   background-repeat: no-repeat;
-  background-size: ;
+  background-position: 50% 80%;
   margin-bottom: 40px;
 }
 
@@ -50,37 +53,71 @@
   .inner-intro {
     border-bottom: 0;
 
-
-  .inner-intro__img {
+    img {
+      width: 460px;
+      padding-top: 105px;
+    }
+    .inner-intro__name {
+      font-size: 30px;
+      line-height: 26px;
+    }
+    .inner-intro__text {
+        text-align: center;
+        font-size: 14px;
+        line-height: 24px;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+        padding-left: 140px;
+        padding-right: 140px;
+    }
+    .inner-intro__img {
     width: 768px;
     height: 290px;
     background: url(../img/bg-back-mobile@1x.jpg) no-repeat;
-    background-position: 0 0;
-    left: -30px;
+    background-position: 50% 80%;
     background-size: cover;
     }
 
   }
+
+
 }
-.inner-intro-text {
-  b {
-    display: block;
-    text-align: center;
-    font-size: 30px;
-    line-height: 26px;
-    text-transform: uppercase;
-    margin-bottom: 35px;
-    }
-}
+
 @media @desktop-widths {
 
-  .inner-intro .inner-intro__img {
-    width: 1200px;
-    background: url(../img/bg-back-mobile@1x.jpg) no-repeat;
-    //background-position: 0 0;
-    //left: -30px;
-    //background-size: cover;
-  }
+  .inner-intro {
+    border-bottom: 0;
 
+    img {
+      width: 460px;
+      padding-top: 105px;
+    }
+    .inner-intro__name {
+      font-size: 30px;
+      line-height: 26px;
+    }
+    .inner-intro__text {
+        text-align: center;
+        font-size: 14px;
+        line-height: 24px;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+        padding-left: 145px;
+        padding-right: 145px;
+    }
+    .inner-intro__img {
+    width: 1200px;
+    height: 300px;
+    margin-bottom: 113px;
+    background: url(../img/bg-back-mobile@1x.jpg) no-repeat;
+    background-position: 50% 80%;
+    background-size: cover;
+    }
+
+    .inner-intro__text {
+      padding: 0 350px;
+    }
+
+  }
 
 }

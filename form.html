@@ -3,40 +3,56 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="less/normalize.less">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
     <header class="main-header">
+
       <nav class="main-nav">
-          <button class="main-nav__closed" type="button" title="Закрыть">Закрыть</button>
+<button class="main-nav__closed" type="button" title="Закрыть">Закрыть</button>
+        <div class="main-nav__wrapper">
           <ul class="main-nav__list">
+
+
             <li class="main-nav__item"><a href="#">Главная</a></li>
             <li class="main-nav__item"><a href="#">Фото и видео</a></li>
             <li class="main-nav__item main-nav__link--active"><a href="#">Форма отзыва</a></li>
             <li class="main-nav__item"><a href="#">HTML ACADEMY</a></li>
-              <button class="main-nav__open" type="button">Открыть меню</button>
+            <button class="main-nav__open" type="button">Открыть меню</button>
+
           </ul>
+
           <div class="main-header__logo">
-            <a class="main-header__logo--link" href="index.html"><img src="img/logo-sedona-mobile.svg" width="320" height="" alt="Логотип"></a>
+            <a class="main-header__logo--link" href="index.html"><img src="img/logo-sedona-mobile.svg" width="150" height="100" alt="Логотип"></a>
         </div>
+        <button class="main-nav__open" type="button">Открыть меню</button>
+      </div>
       </nav>
-        <section class="inner-intro">
-        <img src="img/bg-back-mobile@1x.jpg" width="280" height="280" alt="Вид на горы">
-        <div class="wrapper">
-          <b>Оставьте свой отзыв</b>
-          <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+
+      <section class="inner-intro">
+        <div class="inner-intro__img">
+          <img src="img/text-sedona.svg" width="" height="" alt="Вид на горы">
         </div>
-        </section>
+        <div class="inner-intro__top">
+          <div class="inner-intro__wrapper">
+          <b class="inner-intro__name">Оставьте свой отзыв</b>
+          <p class="inner-intro__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        </div>
+      </div>
+      </section>
           </header>
+
+
         <main class="inner-page-main">
-
-
         <section class="forms">
-          <form action="/echo" method="post">
+          <!-- <form action="/echo" method="post"> -->
 
-            <fieldset>
-              <ul class="form__user">
+            <fieldset class="form__user">
+              <ul>
                 <div class="wrapper">
                   <li><legend class="form__user--legend">Представьтесь:</legend></li>
                   <li class="form__user--name">
@@ -52,8 +68,8 @@
               </ul>
 
             </fieldset>
-              <fieldset>
-                <div class="form-contact">
+              <fieldset class="form-contact">
+                <div class="form-contact__user">
                   <div class="wrapper">
                     <legend class="form-contact__name">Контактная информация:</legend>
                     <label class="form-contact__phone" for="phone">Контактный телефон<sup>*</sup>:</label>
@@ -70,13 +86,20 @@
                 <legend class="form-feeling__name">Ваше общее впечатление:</legend>
                 <ul>
                   <div class="wrapper">
-                    <li><input type="radio" value="variant" name="variant" id="positiv" checked>
-                    <label class="form-feeling__variant" for="positiv">Скорее положительное</label></li>
+                    <li>
+                      <input type="radio" value="variant" name="variant" id="positiv" checked>
+                    <label class="form-feeling__variant" for="positiv">Скорее положительное</label>
+                    <div class="check"></div>
+                    </li>
                     <li><input type="radio" value="variant" name="variant" id="negativ">
                     <label class="form-feeling__variant"
-                    for="negativ">Скорее отрицательное</label></li>
+                    for="negativ">Скорее отрицательное</label>
+                    <div class="check"><div class="inside"></div></div>
+                    </li>
                     <li><input type="radio" value="variant" name="variant" id="answer">
-                    <label class="form-feeling__variant" for="answer">Скорее отрицательное</label></li>
+                    <label class="form-feeling__variant" for="answer">Скорее отрицательное</label>
+                  <div class="check"><div class="inside"></div></div>
+                </li>
                   </div>
               </ul>
               </div>
@@ -88,16 +111,16 @@
                 <ul>
                 <div class="wrapper">
                   <li><input type="checkbox" value="" name="bridge" id="bridge" checked>
-                  <label for="bridge">Мост Дьявола</label></li>
+                  <label for="bridge">Мост Дьявола</label><div class="check"></div></li>
 
                   <li><input type="checkbox" value="" name="park" id="park" checked>
-                  <label for="park">Слайд-парк</label></li>
+                  <label for="park">Слайд-парк</label><div class="check"></div></li>
 
                   <li><input type="checkbox" value="" name="mountain" id="mountain">
-                  <label for="mountain">Гора-Колокол</label></li>
+                  <label for="mountain">Гора-Колокол</label>  <div class="check"><div class="inside"></div></div></li>
 
                   <li><input type="checkbox" value="" name="rock" id="rock" checked>
-                  <label for="rock">Красные скалы</label></li>
+                  <label for="rock">Красные скалы</label><div class="check"></div></li>
                 </div>
               </ul>
               </div>
@@ -112,10 +135,10 @@
               </div>
             </fieldset>
 
-            <div class="feedback-form">
+            <!-- <div class="feedback-form">
               <input class="btn feedback-form__btn" type="submit" value="Отправить отзыв">
               <span class="feedback-form__required">* — обязательные поля</span>
-            </div>
+            </div> -->
           </form>
         </section>
     </main>

@@ -1,0 +1,147 @@
+.features-icon {
+  position: absolute;
+  left: 0;
+  top: -10px;
+  width: 40px;
+  height: 42px;
+  margin-right: 10px;
+  text-align: left;
+  fill: @blue;
+}
+.icon-social {
+  width: 19px;
+  height: 19px;
+  fill: @white;
+}
+.like-icon {
+  margin-right: 13px;
+  fill: #b2b2b2;
+  width: 21px;
+  height: 21px;
+
+  &:active {
+    fill: #88b6d1;
+  }
+}
+.tick-icon {
+  position: absolute;
+  width: 23px;
+  height: 16px;
+  left: 17px;
+  top: 17px;
+
+  &:hover {
+    fill: #333333;
+  }
+
+  &:active {
+    fill: #a4a4a4;
+  }
+}
+.phone-icon, .mail-icon {
+  padding: 17px;
+  background-color: @dark-grey;
+}
+.icon-replay {
+  .video-controls();
+  left: 25px;
+}
+.icon-fullscreen {
+  .video-controls();
+  right: 18px;
+}
+.icon-subtitles {
+  .video-controls();
+  right: 74px;
+}
+.icon-controls:hover {
+  fill: @black-hover;
+}
+.icon-controls:active {
+  fill: #c1c1c1;
+}
+
+@media @tablet-widths {
+  .features-icon {
+    margin-left: 71px;
+    margin-top: 28px;
+    width: 75px;
+    height: 79px;
+  }
+
+  .features-icon--food {
+    margin-left: 88px;
+    margin-top: 31px;
+  }
+  .features-icon--souvenir {
+    margin-left: 110px;
+  }
+
+  .phone-icon {
+    position: absolute;
+    right: 0;
+    top: 17%;
+    padding: 18px;
+  }
+  .mail-icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 18px;
+  }
+  .icon-replay {
+    top: -58px;
+    left: 36px;
+    fill: @white;
+  }
+  .icon-fullscreen {
+    top: -58px;
+    right: 36px;
+    fill: @white;
+  }
+  .icon-subtitles {
+    top: -58px;
+    right: 91px;
+    fill: @white;
+  }
+}
+
+@media @desktop-widths {
+  .features-icon {
+    margin-top: 38px;
+    margin-left: 40%;
+    width: 75px;
+    height: 79px;
+  }
+  .features-icon--food {
+    margin-left: 42%;
+  }
+  .features-icon--souvenir {
+    margin-top: 34px;
+    margin-left: 45%;
+  }
+  .like-icon {
+    fill: @white;
+  }
+  .phone-icon {
+    margin-right: 54px;
+  }
+  .phone-icon, .mail-icon {
+    padding: 18px;
+  }
+  .icon-replay {
+    top: -58px;
+    left: 36px;
+    fill: @white;
+  }
+  .icon-fullscreen {
+    top: -58px;
+    right: 36px;
+    fill: @white;
+  }
+  .icon-subtitles {
+    top: -58px;
+    right: 91px;
+    fill: @white;
+  }
+}

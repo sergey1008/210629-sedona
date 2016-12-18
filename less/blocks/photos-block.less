@@ -1,5 +1,15 @@
+.photos {
+  padding: 0 20px;
+}
 .photos-block {
-  padding-bottom: 72px
+  padding-bottom: 41px
+}
+.photos-block:last-child {
+  padding-bottom: 54px;
+}
+.photos-block__flex {
+  display: flex;
+  flex-direction: column;
 }
 .photos-block__name {
   .text-style-reset();
@@ -14,6 +24,8 @@
   text-decoration: @link-decor-reset;
 }
 .photos-block__img {
+  font-size: 0;
+  line-height: 0;
   img {
     background-color: @fallback;
   }
@@ -29,18 +41,26 @@
 }
 
 @media @tablet-widths {
+  .photos {
+    padding: 0;
+  }
   .photos__flex {
     display: flex;
     width: 100%;
     height: auto;
     flex-wrap: wrap;
-    padding-bottom: 66px;
+    padding-bottom: 15px;
   }
   .photos-block {
     margin-bottom: 0;
     padding-bottom: 0;
     width: 324px;
-    height: 347px;
+  }
+  .photos-block__flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 20px;
   }
   .photos-block--big {
     width: 648px;
@@ -58,7 +78,6 @@
     height: 270px;
   }
   .photos-block__info {
-    outline: 2px solid red;
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 13px;
@@ -77,24 +96,33 @@
 }
 
 @media @desktop-widths {
+  .photos {
+    padding: 0;
+  }
   .photos__flex {
     display: flex;
     width: 100%;
     height: auto;
     flex-wrap: wrap;
-    padding-bottom: 61px;
+    padding-bottom: 63px;
   }
   .photos-block {
     position: relative;
     margin-bottom: 0;
     padding-bottom: 0;
   }
+  .photos-block__flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 20px;
+  }
   .photos-block--big {
     height: 400px;
   }
   .photos-block__img-small {
     width: 400px;
-    height: 270px;
+    height: 268px;
   }
   .photo-block__img-first {
     width: 100%;
@@ -102,11 +130,15 @@
   }
   .photos-block__info {
     position: absolute;
-    bottom: 4px;
-    padding-bottom: 20px;
     width: 100%;
-    background-image: url("/img/phot-block-bg.png");
+    height: 78px;
+    bottom: 3px;
+    margin-bottom: -3px;
+    background-image: url("../img/photo-like-bg.png");
     background-repeat: repeat;
+  }
+  .photos-block__info--first {
+    bottom: 3px;
   }
   .photos-block__link, .photos-block__like {
     color: @white;
@@ -123,5 +155,8 @@
   }
   .photo-block__img-first {
     width: 100%;
+  }
+  .photos-block:last-child {
+    padding-bottom: 0;
   }
 }

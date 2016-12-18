@@ -1,5 +1,14 @@
 .impression {
+  position: relative;
   padding-bottom: 30px;
+}
+@media @mobile-widths-only {
+  .impression {
+    width: 100%;
+    &--topborder::before {
+      .grey-border();
+    }
+  }
 }
 .impression__list {
   .list-style-reset();
@@ -51,6 +60,7 @@ input[type="radio"] + label::before {
   height: 55px;
   border-radius: 50px;
   background-color: @light-grey;
+
 }
 
 input[type="radio"]:checked + label::after {
@@ -64,12 +74,23 @@ input[type="radio"]:checked + label::after {
   background-color: @base-font-color;
   border-radius: 50px;
 }
-
+input[type="radio"] + label:hover::before {
+  background-color: @input-hover;
+}
+input[type="radio"] + label:active::before {
+  background-color: @radio-active;
+}
+input[type="radio"] + label:hover::after {
+  background-color: @black-hover;
+}
+input[type="radio"] + label:active::after {
+  background-color: #a4a4a4;
+}
 
 @media @tablet-widths {
   .impression {
     order: -1;
-    padding-bottom: 25px;
+    padding-bottom: 46px;
   }
   .impression__heading {
     font-size: @big-font-size;
@@ -77,15 +98,15 @@ input[type="radio"]:checked + label::after {
     margin-bottom: 58px;
   }
   input[type="radio"] + label {
-    margin-bottom: 32px;
-    padding-top: 18px;
+    margin-bottom: 38px;
+    padding-top: 14px;
   }
 }
 
 @media @desktop-widths {
   .impression {
     order: -1;
-    padding-bottom: 53px;
+    padding-bottom: 57px;
   }
   .impression__heading {
     margin-left: 80px;

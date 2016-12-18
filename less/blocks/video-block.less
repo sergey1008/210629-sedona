@@ -1,12 +1,13 @@
 .video-block {
-  padding-bottom: 140px;
+  position: relative;
+  padding-bottom: 92px;
 }
 .video-block__slogan {
   padding-bottom: 35px;
 }
 .video-block__heading {
   .text-style-reset();
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   font-family: @base-family;
   font-size: @heading-font-size;
   line-height: @heading-lh;
@@ -18,7 +19,7 @@
 
 .video-block__text {
   .text-style-reset();
-  margin-bottom: 30px;
+  padding: 0 20px;
   font-family: @base-family;
   font-size: @base-font-size;
   line-height: @medium-lh;
@@ -40,6 +41,7 @@
     padding: 0 106px;
   }
   .video-block__heading {
+    margin-bottom: 30px;
     font-size: @photo-font-size;
   }
   .video-block__text {
@@ -58,16 +60,18 @@
 
 @media @desktop-widths {
   .video-block {
-    margin-bottom: 0;
+    width: 800px;
+    margin: 0 auto;
     padding-bottom: 80px;
   }
   .video-block__slogan {
     margin-bottom: 0;
     padding-bottom: 20px;
-    padding-left: 380px;
-    padding-right: 380px;
+    padding-left: 186px;
+    padding-right: 186px;
   }
   .video-block__heading {
+    margin-bottom: 34px;
     font-size: @photo-font-size;
   }
   .video-block__text {

@@ -1,4 +1,5 @@
 .social {
+  display: flex;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 40px;
@@ -6,19 +7,25 @@
 }
 
 .social__btn {
-  display: inline-block;
-  box-sizing: border-box;
-  padding: 17px;
-  width: 48px;
-  height: 48px;
-  margin-right: 5px;
-  vertical-align: middle;
+  display: flex;
+  width: 46px;
+  height: 50px;
+  margin-right: 6px;
   background-color: @blue;
+  justify-content: center;
+  align-items: center;
+
   &:hover {
     background-color: @blue-hover;
+    .icon-social {
+      fill: @white;
+    }
   }
   &:active {
     background-color: @blue-active;
+    .icon-social {
+      opacity: 0.3;
+    }
   }
 }
 @media @tablet-widths {
@@ -35,5 +42,6 @@
     justify-content: center;
     width: calc(100%/3);
     padding-bottom: 0;
+    padding-left: 31px;
   }
 }

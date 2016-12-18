@@ -1,5 +1,13 @@
 .visited {
+  position: relative;
   padding-bottom: 59px;
+}
+@media @mobile-widths-only {
+  .visited {
+    &--topborder::before {
+      .grey-border();
+    }
+  }
 }
 .visited__list input[type="checkbox"] {
   display: none;
@@ -22,14 +30,22 @@ input[type="checkbox"] + label::before {
   height: 55px;
   border-radius: 4px;
   background-color: @light-grey;
-  &:hover {
-    background-color: @input-hover;
-  }
-  &:active {
-    background-color: @radio-active;
-  }
 }
-
+input[type="checkbox"]:checked+label::after {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 16px;
+  left: 17px;
+  top: 17px;
+  background-image: url("../img/icon-tick.svg");
+}
+input[type="checkbox"] + label:hover::before {
+  background-color: @input-hover;
+}
+input[type="checkbox"] + label:active::before {
+  background-color: @radio-active;
+}
 .visited__list {
   .list-style-reset();
 }
@@ -66,11 +82,11 @@ input[type="checkbox"] + label::before {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 47px;
+    padding-bottom: 32px;
   }
   .visited__heading {
-    margin-top: 45px;
-    margin-bottom: 55px;
+    margin-top: 48px;
+    margin-bottom: 40px;
     padding: 0 147px;
     text-align: center;
   }
@@ -114,11 +130,12 @@ input[type="checkbox"] + label::before {
   .visited {
     position: relative;
     width: 100%;
-    padding-bottom: 25px;
+    padding-bottom: 24px;
   }
   .visited__heading {
-    margin-bottom: 54px;
-    padding: 0 302px;
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 57px;
     text-align: center;
   }
   .visited__heading::before {
@@ -128,7 +145,7 @@ input[type="checkbox"] + label::before {
     height: 1px;
     background-color: @decor-grey;
     left: 0;
-    top: 22px;
+    top: 25px;
   }
   .visited__heading::after {
     position: absolute;
@@ -137,7 +154,7 @@ input[type="checkbox"] + label::before {
     height: 1px;
     background-color: @decor-grey;
     right: 0;
-    top: 22px;
+    top: 25px;
   }
   .visited__list {
     display: flex;

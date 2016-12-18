@@ -1,5 +1,14 @@
 .introduction {
-  padding-bottom: 25px;
+  position: relative;
+  width: 100%;
+  padding-bottom: 26px;
+}
+@media @mobile-widths-only {
+  .introduction {
+    &--topborder::before {
+      .grey-border();
+    }
+  }
 }
 .introduction__list {
   .list-style-reset();
@@ -41,14 +50,12 @@
   color: @black;
     &--username {
       width: 230px;
-      height: 58px;
       margin-bottom: 20px;
       padding-left: 23px;
       padding-bottom: 6px;
     }
     &--last-name {
       width: 230px;
-      height: 58px;
       margin-left: 3px;
       margin-bottom: 20px;
       padding-left: 23px;
@@ -56,7 +63,6 @@
     }
     &--middle-name {
       width: 230px;
-      height: 58px;
       margin-left: 7px;
       margin-bottom: 20px;
       padding-left: 19px;
@@ -69,34 +75,49 @@
 
 @media @tablet-widths {
   .introduction {
+    width: 50%;
     margin-left: auto;
   }
   .introduction__heading {
     font-size: @big-font-size;
     margin-bottom: 60px;
-    text-align: left;
+    margin-right: 47px;
+    text-align: center;
   }
   .introduction__input {
     &--username {
       width: 219px;
+      padding-left: 19px;
+      padding-bottom: 7px;
     }
     &--last-name {
       width: 179px;
+      padding-left: 17px;
+      padding-bottom: 7px;
     }
     &--middle-name {
       width: 179px;
+      padding-left: 16px;
     }
+  }
+  .introduction__list {
+    padding-left: 57px;
   }
 }
 
 @media @desktop-widths {
   .introduction {
-    margin-left: 209px;
+    width: 42%;
+    margin-left: 200px;
   }
   .introduction__heading {
-    padding-bottom: 60px;
+    padding-bottom: 40px;
+    padding-left: 10px;
     font-size: @big-font-size;
     text-align: left;
+  }
+  .introduction__text {
+    margin-right: 22px;
   }
   .introduction__input {
     &--username {

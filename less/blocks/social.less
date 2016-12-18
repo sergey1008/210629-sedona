@@ -1,0 +1,39 @@
+.social {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+  font-size: 0;
+}
+
+.social__btn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 17px;
+  width: 48px;
+  height: 48px;
+  margin-right: 5px;
+  vertical-align: middle;
+  background-color: @blue;
+  &:hover {
+    background-color: @blue-hover;
+  }
+  &:active {
+    background-color: @blue-active;
+  }
+}
+@media @tablet-widths {
+  .social {
+    display: flex;
+    justify-content: center;
+    width: calc(100%/3);
+    padding-bottom: 0;
+  }
+}
+@media @desktop-widths {
+  .social {
+    display: flex;
+    justify-content: center;
+    width: calc(100%/3);
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,28 @@
+.hashtag {
+  margin: auto;
+  margin-bottom: 35px;
+}
+.hashtag__text {
+  .text-style-reset();
+  font-family: @base-family;
+  font-size: @big-font-size;
+  line-height: @heading-lh;
+  font-weight: @bold;
+  text-transform: @uppercase;
+  color: @black;
+  text-decoration: @link-decor-reset;
+}
+@media @tablet-widths {
+  .hashtag {
+    margin: 0;
+    width: calc(100%/3);
+  }
+}
+@media @desktop-widths {
+  .hashtag {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    width: calc(100%/3);
+  }
+}

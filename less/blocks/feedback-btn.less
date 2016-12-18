@@ -1,0 +1,85 @@
+.emotion-description__heading {
+  .text-style-reset();
+  margin-left: 35px;
+  font-family: @base-family;
+  font-size: @heading-font-size;
+  line-height: @heading-lh;
+  font-weight: @bold;
+  text-transform: @uppercase;
+  color: @black;
+}
+
+@media @tablet-widths {
+  .emotion-description {
+    position: relative;
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  .emotion-description__heading {
+    margin-bottom: 56px;
+    margin-left: 0;
+    font-size: @big-font-size;
+    text-align: center;
+  }
+  .emotion-description__heading::before {
+    position: absolute;
+    content: "";
+    width: 125px;
+    height: 1px;
+    background-color: @decor-grey;
+    left: 0;
+    top: 13px;
+  }
+  .emotion-description__heading::after {
+    position: absolute;
+    content: "";
+    width: 125px;
+    height: 1px;
+    background-color: @decor-grey;
+    right: 0;
+    top: 13px;
+  }
+  .emotion-description__field {
+    width: 100%;
+    height: 160px;
+    background-color: @light-grey;
+    border: none;
+  }
+}
+
+@media @desktop-widths {
+  .emotion-description__heading {
+    margin-bottom: 57px;
+    font-size: @big-font-size;
+    text-align: center;
+  }
+  .emotion-description__field {
+    width: 100%;
+    height: 160px;
+    background-color: @light-grey;
+    border: none;
+  }
+  .emotion-description {
+    position: relative;
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  .emotion-description__heading::before {
+    position: absolute;
+    content: "";
+    width: 280px;
+    height: 1px;
+    background-color: @decor-grey;
+    left: 0;
+    top: 13px;
+  }
+  .emotion-description__heading::after {
+    position: absolute;
+    content: "";
+    width: 280px;
+    height: 1px;
+    background-color: @decor-grey;
+    right: 0;
+    top: 13px;
+  }
+}

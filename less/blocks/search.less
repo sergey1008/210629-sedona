@@ -1,79 +1,78 @@
 .search {
-  .container();
-  .clearfix();
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.search__heading {
+  .text-style-reset();
+  margin-bottom: 17px;
+  font-family: @base-family;
+  font-size: @big-font-size;
+  line-height: @heading-lh;
+  font-weight: @bold;
+  text-transform: @uppercase;
+  text-align: center;
+  color: @black;
 }
 
-.search {
+.search__text {
+  .text-style-reset();
+  padding-bottom: 36px;
+  font-family: @base-family;
+  font-size: @base-font-size;
+  line-height: @medium-lh;
+  font-weight: @normal;
+  text-transform: @uppercase;
   text-align: center;
-  // margin-top: 30px;
-  .search-wrapper {
-    padding: 0 20px;
-    padding-top: 55px;
-  }
-  .search-name {
+  color: @black;
+}
 
-    font-size: 21px;
-    line-height: 26px;
-    text-transform: uppercase;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .search-text {
-    font-size: 14px;
-    line-height: 24px;
-    text-align: center;
-    text-transform: uppercase;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+.btn {
+  .btn();
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.search__btn {
+  width: 100%;
+  height: 57px;
+  padding: 20px 45px;
+  text-align: center;
 }
 
 @media @tablet-widths {
   .search {
-    width: 768px;
-    // margin-top: 55px;
-    // margin-bottom: 55px;
-    .search-wrapper {
-      padding: 0 155px;
-
-      padding-top: 55px;
-    }
-    .search-text {
-      padding: 0 8px;
-      margin-top: 35px;
-      margin-bottom: 45px;
-    }
-    .search-name {
-      font-size: 30px;
-      line-height: 26px;
-      margin-bottom: 35px;
-    }
-
+    padding-bottom: 59px;
   }
-}
+  .search__heading {
+    margin-bottom: 32px;
+    font-size: @photo-font-size;
+  }
+  .search__text {
+    width: 299px;
+    padding-bottom: 17px;
+  }
+  .search__btn {
+    width: 456px;
+    margin-bottom: 0;
+  }
 
+}
 @media @desktop-widths {
   .search {
-    width: 1200px;
-    margin-top: 55px;
-
-    .search-wrapper {
-      padding: 0 370px;
-    }
-
-
-    .search-text {
-      padding: 0 9px;
-      margin-top: 35px;
-      margin-bottom: 45px;
-    }
-    .search-name {
-      font-size: 30px;
-      line-height: 26px;
-      margin-bottom: 35px;
-
-
-    }
-
+    padding-bottom: 67px;
+  }
+  .search__heading {
+    margin-bottom: 32px;
+    font-size: @photo-font-size;
+  }
+  .search__text {
+   padding-bottom: 44px;
+    width: 400px;
+  }
+  .search__btn {
+    width: 456px;
   }
 }

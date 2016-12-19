@@ -3,17 +3,37 @@
   .clearfix();
 }
 
+// .main-page__photo {
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+// }
+
 .post-photo {
+  display: flex;
+  flex-direction: column;
+  width: 324px;
   margin: 0;
   padding: 0;
+  border: 0;
+  margin-top: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid #e5e5e5;
+  .post-photo__info {
+    position: relative;
+    margin-bottom: 22px;
+  }
 
 }
 
 .post-photo img {
   margin-bottom: 20px;
+  width: 324px;
+  padding: 0;
+  margin: 0;
 }
+
+
 
 .post-photo .post-photo__name {
   display: block;
@@ -34,5 +54,234 @@
     display: block;
     font-size: 14px;
     font-weight: bold;
-    margin-bottom: 19px;
+}
+
+
+
+@media @tablet-widths {
+    .inner-page-main__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 60px;
+
+  }
+
+  .post-photo {
+    padding: 0;
+    margin: 0;
+    img {
+      padding: 0;
+      margin: 0;
+
+    }
+    .post-photo__info {
+      // display: flex;
+      // flex-direction: column;
+      min-height: 80px;
+      margin-bottom: 0;
+      // background-color: #f2f2f2;
+    }
+    .post-photo__writer {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 100;
+      line-height: 24px;
+      text-transform: none;
+      padding-left: 20px;
+    }
+}
+  .post-photo {
+    width: 324px;
+    height: 347px;
+    border: 0;
+    img {
+      width: 324px;
+    }
+  }
+  .post-photo {
+    border-bottom: 0;
+    &:first-child {
+      margin-top: 70px;
+      width: 768px;
+      height: 480px;
+    }
+    img {
+      width: 768px;
+      height: 400px;
+    }
+  }
+
+  // .post-photo:first-child img {
+  //   width: 768px;
+  //   height: 480px;
+  // }
+
+  .post-photo:nth-child(2n+1) .post-photo__info {
+    background-color: #f2f2f2;
+  }
+
+  .post-photo:nth-child(2n) .post-photo__info {
+    background-color: #eaeaea;
+  }
+
+
+
+    .post-photo__name {
+      display: block;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 24px;
+      padding-top: 20px;
+      padding-left: 20px;
+    }
+
+
+
+    .post-photo__like {
+      display: inline-block;
+      float: right;
+      // position: absolute;
+      // right: 23px;
+      // bottom: 35px;
+
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      font-weight: bold;
+      float: right;
+      padding-right: 20px;
+
+  }
+
+  }
+
+
+
+@media @desktop-widths {
+
+  .inner-page-main__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+
+}
+
+.post-photo {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  color: @white-color;
+  img {
+    padding: 0;
+    margin: 0;
+
+  }
+
+  .post-photo:first-child {
+    position: relative;
+  }
+
+  .post-photo:first-child .post-photo__info {
+    position: absolute;
+  }
+
+  .post-photo__info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 80px;
+    margin-bottom: 0;
+    background-color: rgba(178, 178, 178, 0.3);
+  }
+  .post-photo__writer {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 24px;
+    text-transform: none;
+    padding-left: 20px;
+  }
+}
+.post-photo {
+  width: 400px;
+  height: 347px;
+  border: 0;
+  img {
+    width: 324px;
+  }
+}
+.post-photo {
+  border-bottom: 0;
+  &:first-child {
+    position: relative;
+    margin-top: 0;
+    width: 1200px;
+    height: 400px;
+  }
+  img {
+    width: 1200px;
+    height: 400px;
+  }
+}
+
+.post-photo:first-child .post-photo__info {
+  background-color: rgba(178, 178, 178, 0.5);
+  position: absolute;
+  bottom: 0;
+}
+.post-photo:nth-child(2n+1) .post-photo__info {
+  background-color: rgba(178, 178, 178, 0.5);
+}
+
+.post-photo:nth-child(2n) .post-photo__info {
+  background-color: rgba(178, 178, 178, 0.5);
+}
+
+
+
+  .post-photo__name {
+    display: block;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+
+
+
+  .post-photo__like {
+    display: inline-block;
+    float: right;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    float: right;
+    padding-right: 20px;
+
+}
+
+
+
+
+  // .promo-video {
+  //
+  //   .romo-video__text {
+  //     padding-left: 355px;
+  //     padding-right: 355px;
+  //   }
+  //   .promo-video__player {
+  //     .wrapper {
+  //       padding: 0 200px;
+  //     }
+  //   }
+  // }
+
 }

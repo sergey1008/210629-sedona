@@ -5,8 +5,13 @@
 
 .search {
   text-align: center;
-  margin-top: 30px;
+  // margin-top: 30px;
+  .search-wrapper {
+    padding: 0 20px;
+    padding-top: 55px;
+  }
   .search-name {
+
     font-size: 21px;
     line-height: 26px;
     text-transform: uppercase;
@@ -20,5 +25,55 @@
     text-transform: uppercase;
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+
+@media @tablet-widths {
+  .search {
+    width: 768px;
+    // margin-top: 55px;
+    // margin-bottom: 55px;
+    .search-wrapper {
+      padding: 0 155px;
+
+      padding-top: 55px;
+    }
+    .search-text {
+      padding: 0 8px;
+      margin-top: 35px;
+      margin-bottom: 45px;
+    }
+    .search-name {
+      font-size: 30px;
+      line-height: 26px;
+      margin-bottom: 35px;
+    }
+
+  }
+}
+
+@media @desktop-widths {
+  .search {
+    width: 1200px;
+    margin-top: 55px;
+
+    .search-wrapper {
+      padding: 0 370px;
+    }
+
+
+    .search-text {
+      padding: 0 9px;
+      margin-top: 35px;
+      margin-bottom: 45px;
+    }
+    .search-name {
+      font-size: 30px;
+      line-height: 26px;
+      margin-bottom: 35px;
+
+
+    }
+
   }
 }

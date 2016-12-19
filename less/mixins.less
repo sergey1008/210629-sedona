@@ -12,12 +12,26 @@
 
 
   @media @tablet-widths {
-    width: 640px;
+    width: 768px;
+    // .wrapper {
+    //   padding: 0 60px;
+    // }
   }
 
   @media @desktop-widths {
-    width: 960px;
+    width: 1200px;
   }
+}
+
+.container-fluid () {
+  width: auto;
+
+  @media @tablet-widths {
+    width: 88%;        /* 640px / 768px ~= 84% */
+    max-width: 960px;  /* 960px / .84 ~= 1142px (центровка начнётся чуть раньше 1200px) */
+    margin: 0 auto;
+  }
+
 }
 
 .no-outline() {
@@ -41,5 +55,4 @@
 
 .wrapper {
   padding: 0 20px;
-  margin: 0 auto;
 }

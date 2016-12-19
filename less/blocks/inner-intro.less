@@ -1,38 +1,123 @@
-.inner-page-main {
+.inner-intro {
   .container();
-  .clearfix();
+  // .clearfix();
 }
+
 .inner-intro {
   margin-bottom: 22px;
   border-bottom: 1px solid #e5e5e5;
+  p {
+    text-align: center;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+    font-weight: lighter;
+  }
+
+  .inner-intro__name {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+  }
+
+  img {
+    display: flex;
+    width: 230px;
+
+    // height: 160px;
+    margin: 0 auto;
+    padding-top: 60px;
+
+    // background-image: url(../img/bg-back-mobile@1x.jpg);
+    // background-repeat: no-repeat;
+    // background-position: 50% 80%;
+    // margin-bottom: 40px;
+    // padding: 0 20px;
+  }
 }
 
-.inner-intro img {
-  display: block;
+.inner-intro .inner-intro__img {
   width: 320px;
-  background-image: url(../img/text-sedona.svg);
+  height: 160px;
+  background-image: url(../img/bg-back-mobile@1x.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position: 50% 80%;
   margin-bottom: 40px;
 }
 
-.inner-intro b {
-  display: block;
-  text-align: center;
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
-  margin-bottom: 35px;
+@media @tablet-widths {
+
+  .inner-intro {
+    border-bottom: 0;
+
+    img {
+      width: 460px;
+      padding-top: 105px;
+    }
+    .inner-intro__name {
+      font-size: 30px;
+      line-height: 26px;
+    }
+    .inner-intro__text {
+        text-align: center;
+        font-size: 14px;
+        line-height: 24px;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+        padding-left: 140px;
+        padding-right: 140px;
+    }
+    .inner-intro__img {
+    width: 768px;
+    height: 290px;
+    background: url(../img/bg-back-mobile@1x.jpg) no-repeat;
+    background-position: 50% 80%;
+    background-size: cover;
+    }
+
+  }
+
+
 }
 
-.inner-intro p {
-  text-align: center;
-  font-size: 14px;
-  line-height: 26px;
-  text-transform: uppercase;
-  font-weight: lighter;
-}
+@media @desktop-widths {
 
-.inner-intro h1 {
+  .inner-intro {
+    border-bottom: 0;
+
+    img {
+      width: 460px;
+      padding-top: 105px;
+    }
+    .inner-intro__name {
+      font-size: 30px;
+      line-height: 26px;
+    }
+    .inner-intro__text {
+        text-align: center;
+        font-size: 14px;
+        line-height: 24px;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+        padding-left: 145px;
+        padding-right: 145px;
+    }
+    .inner-intro__img {
+    width: 1200px;
+    height: 300px;
+    margin-bottom: 113px;
+    background: url(../img/bg-back-mobile@1x.jpg) no-repeat;
+    background-position: 50% 80%;
+    background-size: cover;
+    }
+
+    .inner-intro__text {
+      padding: 0 350px;
+    }
+
+  }
 
 }

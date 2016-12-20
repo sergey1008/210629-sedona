@@ -1,0 +1,146 @@
+body {
+  width: 100%;
+
+  @media @desktop-widths {
+    background-color: @light-grey;
+  }
+}
+
+.container {
+  .container();
+  @media @tablet-widths {
+    width: 768px;
+  }
+  @media @desktop-widths {
+    width: 1200px;
+  }
+}
+
+.container--inner {
+  .container-inner();
+  @media @tablet-widths {
+    width: 648px;
+    padding: 0 60px;
+  }
+}
+
+.container--main {
+  .container-main();
+}
+
+.container--form {
+  .container-form();
+}
+
+img {
+  width: 100%;
+}
+
+input {
+  box-sizing: border-box;
+  padding-right: 20px;
+  height: 57px;
+  background-color: @light-grey;
+  outline: none;
+  border: 4px solid @light-grey;
+  &:hover {
+    background-color: @input-hover;
+    border: 4px solid @input-hover
+  }
+  &:focus {
+    background-color: @white;
+    border: 4px solid @input-hover;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: @black;
+  font-family: @base-family;
+  font-size: @heading-font-size;
+  line-height: @heading-lh;
+}
+::-moz-placeholder {
+  color:@black;
+  font-family: @base-family;
+  font-size: @heading-font-size;
+  line-height: @heading-lh;
+}
+:-moz-placeholder {
+  color:@black;
+  font-family: @base-family;
+  font-size: @heading-font-size;
+  line-height: @heading-lh;
+}
+:-ms-input-placeholder {
+  color:@black;
+  font-family: @base-family;
+  font-size: @heading-font-size;
+  line-height: @heading-lh;
+}
+
+
+textarea::-webkit-input-placeholder {
+  color: @black;
+  font-family: @base-family;
+  font-size: @heading-font-size;
+  line-height: @heading-lh;
+  font-weight: @bold;
+}
+textarea::-moz-placeholder {
+  color:@black;
+  font-family: @base-family;
+  font-size: @heading-font-size;
+  line-height: @heading-lh;
+  font-weight: @bold;
+}
+textarea:-moz-placeholder {
+  color:@black;
+  font-family: @base-family;
+  font-size: @heading-font-size;
+  line-height: @heading-lh;
+  font-weight: @bold;
+}
+textarea:-ms-input-placeholder {
+  color:@black;
+  font-family: @base-family;
+  font-size: @heading-font-size;
+  line-height: @heading-lh;
+  font-weight: @bold;
+}
+
+@font-face {
+  font-family: @local-font;
+  src: url("../fonts/ptsans.woff") format("woff"),
+  url("../fonts/ptsans.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: @local-font;
+  src: url("../fonts/ptsansbold.woff") format("woff"),
+  url("../fonts/ptsansbold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+fieldset {
+  border: @border-reset;
+  .text-style-reset();
+}
+
+.btn {
+  &:hover {
+    border: none;
+    background-color: @blue-hover;
+  }
+  &:active {
+    border: none;
+    background-color: @blue-active;
+    color: @color-active;
+  }
+  &:disabled {
+    background-color: @input-hover;
+    opacity: 0.3;
+  }
+}

@@ -1,0 +1,124 @@
+.emotion-description {
+  position: relative;
+  width: 100%;
+}
+@media @mobile-widths-only {
+  .emotion-description {
+    &--topborder::before {
+      .grey-border();
+    }
+  }
+}
+.emotion-description__heading {
+  .text-style-reset();
+  margin-left: 35px;
+  margin-bottom: 25px;
+  font-family: @base-family;
+  font-size: @heading-font-size;
+  line-height: @heading-lh;
+  font-weight: @bold;
+  text-transform: @uppercase;
+  color: @black;
+}
+
+.emotion-description__field {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: @light-grey;
+  border: 4px solid @light-grey;
+  outline: none;
+
+  &:hover {
+    background-color: @input-hover;
+  }
+  &:focus {
+    background-color: @white;
+    border: 4px solid @input-hover;
+  }
+}
+
+@media @tablet-widths {
+  .emotion-description {
+    position: relative;
+    width: 100%;
+    padding-bottom: 54px;
+  }
+
+  .emotion-description__heading {
+    margin-bottom: 56px;
+    margin-left: 0;
+    font-size: @big-font-size;
+    text-align: center;
+  }
+
+  .emotion-description__heading::before {
+    position: absolute;
+    content: "";
+    width: 125px;
+    height: 1px;
+    background-color: @decor-grey;
+    left: 0;
+    top: 13px;
+  }
+
+  .emotion-description__heading::after {
+    position: absolute;
+    content: "";
+    width: 125px;
+    height: 1px;
+    background-color: @decor-grey;
+    right: 0;
+    top: 13px;
+  }
+
+  .emotion-description__field {
+    width: 100%;
+    height: 160px;
+    background-color: @light-grey;
+    border: none;
+  }
+}
+
+@media @desktop-widths {
+  .emotion-description__heading {
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 54px;
+    font-size: @big-font-size;
+    text-align: center;
+  }
+
+  .emotion-description__field {
+    width: 100%;
+    height: 160px;
+    background-color: @light-grey;
+    border: none;
+  }
+
+  .emotion-description {
+    position: relative;
+    width: 100%;
+    padding-bottom: 57px;
+  }
+
+  .emotion-description__heading::before {
+    position: absolute;
+    content: "";
+    width: 280px;
+    height: 1px;
+    background-color: @decor-grey;
+    left: 0;
+    top: 13px;
+  }
+
+  .emotion-description__heading::after {
+    position: absolute;
+    content: "";
+    width: 280px;
+    height: 1px;
+    background-color: @decor-grey;
+    right: 0;
+    top: 13px;
+  }
+}

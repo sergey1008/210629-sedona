@@ -1,102 +1,119 @@
 .intro {
-  .container();
-  // .clearfix();
-}
-
-.intro {
-  min-height: 630px;
-  h1 {
-    margin: 0;
-    font-size: 18px;
-    line-height: 26px;
-    text-align: center;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-top: 45px;
-    margin-bottom: 35px;
-  }
-  p {
-    font-size: 14px;
-    line-height: 26px;
-    text-align: center;
-    text-transform: uppercase;
-  }
-}
-
-.intro .intro-img {
-  width: 320px;
-  height: 390px;
-  background: url(../img/bg-back-mobile@1x.jpg) no-repeat;
-  background-position: 0 0;
-  left: -30px;
-}
-
-.intro .intro-img__top {
   position: relative;
-  top: 90px;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 280px;
-}
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-color: #e1eff8;
 
-.intro-text__wrapper {
-  padding: 0 20px;
+
+  @media @retina {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-size: cover;
+  }
+}
+.intro__main {
+  width: 280px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+.intro__inner {
+  display: block;
+  padding-top: 34px;
+  padding-bottom: 44px;
+  width: 230px;
+  margin: 0 auto;
+}
+.intro::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  background-image: url("../img/bg-intro-triangle-mobile.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 390px;
+  background-position: left bottom;
+  background-size: 100%;
 }
 
 @media @tablet-widths {
-  // .intro {
-  //   .container-fluid();
-  // }
-  .intro-text__wrapper {
-    padding: 0 115px;
+  .intro {
+    padding-top: 41px;
+    padding-bottom: 89px;
+    margin-top: 11px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+
+    @media @retina {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-size: cover;
+    }
   }
 
-  .intro .intro-img {
-    width: auto;
-    height: 518px;
-    background: url(../img/bg-back-mobile@1x.jpg) no-repeat;
-    //background-position: 0 0;
-    //left: -30px;
-    background-size: 100% 100%;
+  .intro::before {
+    background-image: url("../img/text-index-tablet.png");
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
   }
-  .intro .intro-img__top {
-    //position: relative;
-    top: 75px;
-    //padding-left: 20px;
-    //padding-right: 20px;
-    width: 463px;
-    //min-height: 520px;
+
+  .intro::after {
+    background-image: url("../img/bg-intro-triangle-tablet.svg");
+    height: 100%;
+    background-position: left bottom;
+  }
+
+  .intro__main {
+    width: 473px;
+    display: block;
     margin: 0 auto;
-
-
+  }
+  .intro__inner {
+    margin-top: 0;
+    padding-top: 57px;
+    padding-bottom: 28px;
+    width: 460px;
   }
 }
 
 @media @desktop-widths {
+  .intro {
+    padding-top: 45px;
+    padding-bottom: 79px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
 
-
-  .intro-text__wrapper {
-    h1 {
-    padding: 0 250px;
+    @media @retina {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-size: cover;
     }
-    // padding: 0 115px;
-
   }
 
-  .intro .intro-img {
-    width: auto;
-    height: 518px;
-    background-size: 100% 100%;
+  .intro::after {
+    background-image: url("../img/bg-intro-triangle-desktop.svg");
+    height: 100%;
+    background-position: left bottom;
   }
-  .intro .intro-img__top {
-    //position: relative;
-    top: 75px;
-    //padding-left: 20px;
-    //padding-right: 20px;
-    width: 463px;
-    //min-height: 520px;
+  .intro--main {
+    padding-top: 11px;
+    padding-bottom: 19px;
+  }
+  .intro__main {
+    width: 473px;
+    display: block;
     margin: 0 auto;
-
-
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .intro__inner {
+    width: 461px;
+    margin-top: 0;
+    padding-top:54px;
   }
 }

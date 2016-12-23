@@ -6,9 +6,7 @@
   <meta name="format-detection" content="telephone=no">
   <title>form</title>
   <link rel="stylesheet" href="css/style.css">
-  <script>
-    document.createElement("picture");
-  </script>
+
 </head>
 <body>
 
@@ -347,10 +345,13 @@
     <button class="btn  popup--success__button" type="button">Закрыть окно</button>
   </div>
 </section>
+
+
 <script>
+  //menu
   var navMain = document.querySelector('.main-nav');
   var navToggle = document.querySelector('.main-nav__toggle');
-
+  //popup
   var btn = document.querySelector(".feedback-btn");
   var popupError = document.querySelector(".popup--error");
   var popupSuccess = document.querySelector(".popup--success");
@@ -359,6 +360,9 @@
   var formTell = document.querySelector("[name=phone-number]");
   var formEmail = document.querySelector("[name=email]");
   var storage = localStorage.getItem("phone-number");
+
+  //menu
+  navMain.classList.remove('main-nav--nojs');
 
   navToggle.addEventListener('click', function () {
     if (navMain.classList.contains('main-nav--closed')) {
@@ -370,44 +374,17 @@
     }
   });
 
-  // btn.addEventListener("click", function(event) {
-  //   event.preventDefault();
-    // popupError.classList.add("popup--error-show");
-    // popupSuccess.classList.add("popup--success-show");
-  // });
-
-  // closeError.addEventListener("click", function(event) {
-  //   event.preventDefault();
-  //   popupError.classList.remove("popup--error-show");
-  // });
-  //
-  // closeSuccess.addEventListener("click", function(event) {
-  //   event.preventDefault();
-  //   popupSuccess.classList.remove("popup--success-show");
-  // });
-
+  //popup
   formTell.addEventListener("submit", function(event) {
     if (!phone-number.value || !email.value) {
       event.preventDefault();
     } else {
-      // btn.addEventListener("click", function(event) {
-        // event.preventDefault();
+      btn.addEventListener("click", function(event) {
+      event.preventDefault();
       popupError.classList.add("popup--error-show");
-    // }
-      // localStorage.setItem("")
-    }
-  });
-
-  window.addEventListener("keydown", function(event) {
-    if (event.keyCode == 13) {
-      if (popupError.classList.contains("popup--error-show")) {
-      popupError.classList.remove("popup--error-show");
-      }
-    }
-  });
-
-
-
+  }
+}
+});
 </script>
 </body>
 </html>

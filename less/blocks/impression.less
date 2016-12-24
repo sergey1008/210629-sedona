@@ -1,0 +1,120 @@
+.impression {
+  position: relative;
+  padding-bottom: 30px;
+}
+@media @mobile-widths-only {
+  .impression {
+    width: 100%;
+    &--topborder::before {
+      .grey-border();
+    }
+  }
+}
+.impression__list {
+  .list-style-reset();
+}
+
+.impression__heading {
+  .text-style-reset();
+  margin-bottom: 20px;
+  margin-left: 24px;
+  font-family: @base-family;
+  font-size: @heading-font-size;
+  line-height: @heading-lh;
+  font-weight: @bold;
+  text-transform: @uppercase;
+  text-align: left;
+  color: @black;
+}
+
+.impression__text {
+  .text-style-reset();
+  font-family: @base-family;
+  font-size: @heading-font-size;
+  line-height: @heading-lh;
+  font-weight: @bold;
+  text-transform: @lowcase;
+  color: @black;
+}
+.impression__list input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  padding-left: 78px;
+  padding-top: 15px;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+input[type="radio"] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 55px;
+  height: 55px;
+  border-radius: 50px;
+  background-color: @light-grey;
+
+}
+
+input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  display: block;
+  width: 21px;
+  height: 21px;
+  background-color: @base-font-color;
+  border-radius: 50px;
+}
+input[type="radio"] + label:hover::before {
+  background-color: @input-hover;
+}
+input[type="radio"] + label:active::before {
+  background-color: @radio-active;
+}
+input[type="radio"] + label:hover::after {
+  background-color: @black-hover;
+}
+input[type="radio"] + label:active::after {
+  background-color: #a4a4a4;
+}
+
+@media @tablet-widths {
+  .impression {
+    order: -1;
+    padding-bottom: 46px;
+  }
+  .impression__heading {
+    font-size: @big-font-size;
+    margin-left: 0;
+    margin-bottom: 58px;
+  }
+  input[type="radio"] + label {
+    margin-bottom: 38px;
+    padding-top: 14px;
+  }
+}
+
+@media @desktop-widths {
+  .impression {
+    order: -1;
+    padding-bottom: 57px;
+  }
+  .impression__heading {
+    margin-left: 80px;
+    margin-bottom: 58px;
+    font-size: @big-font-size;
+  }
+  input[type="radio"] + label {
+    margin-bottom: 32px;
+    padding-top: 18px;
+  }
+}

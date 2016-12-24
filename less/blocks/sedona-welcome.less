@@ -1,0 +1,57 @@
+.sedona-welcome {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 42px;
+  padding-bottom: 9px;
+  background-color: @white;
+}
+.sedona-welcome__heading {
+  .text-style-reset();
+  margin-bottom: 27px;
+  font-family: @base-family;
+  font-size: @heading-font-size;
+  line-height: @heading-lh;
+  font-weight: @bold;
+  text-transform: @uppercase;
+  text-align: center;
+  color: @black;
+}
+
+.sedona-welcome__text {
+  .text-style-reset();
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: @base-family;
+  font-size: @base-font-size;
+  line-height: @heading-lh;
+  font-weight: @normal;
+  text-transform: @uppercase;
+  text-align: center;
+  color: @black;
+}
+
+@media @tablet-widths {
+  .sedona-welcome {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 52px;
+    padding-top: 51px;
+  }
+  .sedona-welcome__heading {
+    padding: 0 74px;
+    font-size: @big-font-size;
+  }
+}
+
+@media @desktop-widths {
+  .sedona-welcome {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 49px;
+  }
+  .sedona-welcome__heading {
+    padding: 0 288px;
+    font-size: @big-font-size;
+  }
+}

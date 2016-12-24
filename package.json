@@ -24,17 +24,6 @@
   "scripts": {
     "test": "editorconfig-cli",
     "build": "grunt build",
-    "start": "npm run build && grunt serve"
-  },
-  "editorconfig-cli": [
-    "*.html",
-    "*.json",
-    "*.js",
-    "js/**/*.js",
-    "img/**/*.svg",
-    "less/**/*.less"
-  ],
-  "engines": {
-    "node": "6.7"
+    "start": "npm run build && grunt serve",
   }
 }

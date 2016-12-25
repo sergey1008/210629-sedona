@@ -459,7 +459,11 @@ button:focus {
   width: 70px;
   height: 50px;
   font-size: 0;
+<<<<<<< HEAD
   background-color: transparent;
+=======
+  background-color: #81b3d2;
+>>>>>>> module9-task1
   cursor: pointer;
   border: 0;
   border-color: none;

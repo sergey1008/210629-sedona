@@ -6,7 +6,6 @@
   <meta name="format-detection" content="telephone=no">
   <title>form</title>
   <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -123,7 +122,8 @@
         </svg>
 
 <header class="header">
-  <nav class="main-nav  main-nav--opened">
+  <nav class="main-nav  main-nav--closed">
+    <button class="main-nav__toggle" type="button">Открыть меню</button>
     <ul class="main-nav__list">
       <li class="main-nav__item"><a href="index.html">Главная</a></li>
       <li class="main-nav__item"><a href="photo.html">фото и видео</a></li>
@@ -323,23 +323,10 @@
     <button class="btn  popup--success__button" type="button">Закрыть окно</button>
   </div>
 </section>
-
-
 <script>
-  //menu
   var navMain = document.querySelector('.main-nav');
   var navToggle = document.querySelector('.main-nav__toggle');
-  //popup
-  var btn = document.querySelector(".feedback-btn");
-  var popupError = document.querySelector(".popup--error");
-  var popupSuccess = document.querySelector(".popup--success");
-  var closeError = document.querySelector(".popup--error__close");
-  var closeSuccess = document.querySelector(".popup--success__close");
-  var formTell = document.querySelector("[name=phone-number]");
-  var formEmail = document.querySelector("[name=email]");
-  var storage = localStorage.getItem("phone-number");
 
-  //menu
   navMain.classList.remove('main-nav--nojs');
 
   navToggle.addEventListener('click', function () {
@@ -351,18 +338,6 @@
       navMain.classList.remove('main-nav--opened');
     }
   });
-
-  //popup
-  formTell.addEventListener("submit", function(event) {
-    if (!phone-number.value || !email.value) {
-      event.preventDefault();
-    } else {
-      btn.addEventListener("click", function(event) {
-      event.preventDefault();
-      popupError.classList.add("popup--error-show");
-  }
-}
-});
 </script>
 </body>
 </html>

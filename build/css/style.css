@@ -445,13 +445,64 @@ template {
   color: #ffffff;
   text-decoration: none;
 }
+button,
+button:active,
+button:focus {
+  outline: none;
+}
+.main-nav--opened .main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 70px;
+  height: 50px;
+  font-size: 0;
+  background-color: #81b3d2;
+  cursor: pointer;
+  border: 0;
+  border-color: none;
+}
+.main-nav--opened .main-nav__toggle:hover {
+  background-color: #81b3d2;
+}
+.main-nav--opened .main-nav__toggle:active {
+  background-color: #81b3d2;
+}
+.main-nav--opened .main-nav__toggle::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 5px;
+  height: 25px;
+  background-color: #ffffff;
+  top: 17px;
+  right: 30px;
+  transform: rotate(45deg);
+}
+.main-nav--opened .main-nav__toggle::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 5px;
+  height: 25px;
+  background-color: #ffffff;
+  top: 17px;
+  right: 30px;
+  transform: rotate(-45deg);
+}
+.main-nav--closed .main-nav__toggle {
+  font-size: 0;
+}
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  bottom: 32px;
+  top: 17px;
   right: 20px;
   width: 23px;
   height: 4px;
+  font-size: 0;
   background-color: #81b3d2;
   box-shadow: 0 8px 0 0 #81b3d2, 0 16px 0 0 #81b3d2;
 }
@@ -462,43 +513,6 @@ template {
 .main-nav--closed .main-nav__toggle:active::before {
   background-color: rgba(129, 179, 210, 0.3);
   box-shadow: 0 8px 0 0 rgba(129, 179, 210, 0.3), 0 16px 0 0 rgba(129, 179, 210, 0.3);
-}
-.main-nav--opened .main-nav__toggle::before {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 5px;
-  height: 32px;
-  background-color: #ffffff;
-  top: 11px;
-  right: 36px;
-  transform: rotate(45deg);
-}
-.main-nav--opened .main-nav__toggle::after {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 5px;
-  height: 32px;
-  background-color: #ffffff;
-  top: 11px;
-  right: 36px;
-  transform: rotate(-45deg);
-}
-.main-nav--opened .main-nav__toggle:hover {
-  background-color: #ffffff;
-}
-.main-nav--opened .main-nav__toggle:hover::before,
-.main-nav--opened .main-nav__toggle:hover::after {
-  background-color: #ffffff;
-}
-.main-nav--opened .main-nav__toggle--inner::before {
-  top: 10px;
-  right: 29px;
-}
-.main-nav--opened .main-nav__toggle--inner::after {
-  top: 10px;
-  right: 29px;
 }
 @media (max-width: 767px) {
   .main-nav__list {

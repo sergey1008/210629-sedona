@@ -4,8 +4,10 @@
   height: 350px;
   background-color: @light-grey;
 }
-
-.map__img {
+iframe {
+  border:0;
+}
+.map {
   display: block;
   background-image: url("../img/bg-map-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -26,15 +28,15 @@
   border: 0;
 }
 
-.map__img {
-  height: 100%;
+.map {
+  height: 350px;
 }
 
 .map::before {
   position: absolute;
   content: "";
-  top: 161px;
-  left: 50%;
+  top: 159px;
+  left: 45%;
   width: 30px;
   height: 30px;
   background-color: @white;
@@ -46,14 +48,10 @@
   content: "";
   width: 16px;
   height: 16px;
-  top: 169px;
-  left: 52%;
+  top: 166px;
+  left: 47%;
   background-color: @blue;
   border-radius: 50%;
-}
-
-.map__img {
-  display: block;
 }
 
 @media @tablet-widths {
@@ -67,7 +65,9 @@
     right: 368px;
   }
 
-  .map__img {
+  .map {
+    padding-bottom: 6px;
+    height: 350px;
     background-image: url("../img/bg-map-tablet@1x.jpg");
     @media @retina {
       background-image: url("../img/bg-map-tablet@2x.jpg");
@@ -83,11 +83,14 @@
   }
 
   .map::after {
+    top: 165px;
     left: 591px;
     right: 585px;
   }
 
-  .map__img {
+  .map {
+    padding-bottom: 0;
+    height: 350px;
     background-image: url("../img/bg-map-desktop@1x.jpg");
     @media @retina {
       background-image: url("../img/bg-map-desktop@2x.jpg");

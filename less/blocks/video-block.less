@@ -28,9 +28,48 @@
   text-align: center;
   color: @black;
 }
-.video-block__img {
-  background-color: @fallback;
+
+.video-control {
+  position: absolute;
+  width: 100%;
+  height: 110px;
+  bottom: 8px;
 }
+.video-control__top {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 45px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-image: url("../img/controls-bg.png");
+}
+.video-control__top::before {
+  position: absolute;
+  content: "";
+  top: 22px;
+  width: 237px;
+  height: 3px;
+  background-color: #736d6b;
+}
+.video-control__top::after {
+  position: absolute;
+  content: "";
+  top: 18px;
+  left: 57px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: @white;
+}
+.video-control__bottom {
+  position: relative;
+  width: 100%;
+  height: 66px;
+  background-color: @light-grey;
+}
+
 
 @media @tablet-widths {
   .video-block {

@@ -450,6 +450,13 @@ button:active,
 button:focus {
   outline: none;
 }
+.main-nav__toggle {
+  width: 23px;
+  height: 23px;
+  top: 16px;
+  position: absolute;
+  right: 15px;
+}
 .main-nav--opened .main-nav__toggle {
   position: absolute;
   top: 0;
@@ -459,11 +466,7 @@ button:focus {
   width: 70px;
   height: 50px;
   font-size: 0;
-<<<<<<< HEAD
   background-color: transparent;
-=======
-  background-color: #81b3d2;
->>>>>>> module9-task1
   cursor: pointer;
   border: 0;
   border-color: none;
@@ -479,9 +482,9 @@ button:focus {
   content: "";
   display: block;
   width: 5px;
-  height: 25px;
+  height: 32px;
   background-color: #ffffff;
-  top: 17px;
+  top: 15px;
   right: 30px;
   transform: rotate(45deg);
 }
@@ -490,9 +493,9 @@ button:focus {
   content: "";
   display: block;
   width: 5px;
-  height: 25px;
+  height: 32px;
   background-color: #ffffff;
-  top: 17px;
+  top: 15px;
   right: 30px;
   transform: rotate(-45deg);
 }
@@ -502,8 +505,8 @@ button:focus {
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 17px;
-  right: 20px;
+  bottom: 18px;
+  right: 0px;
   width: 23px;
   height: 4px;
   font-size: 0;

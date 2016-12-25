@@ -52,6 +52,13 @@ button:active,
 button:focus {
     outline: none;
 }
+.main-nav__toggle {
+  width: 23px;
+  height: 23px;
+  top: 16px;
+  position: absolute;
+  right: 15px;
+}
 
 .main-nav--opened
 .main-nav__toggle {
@@ -88,9 +95,12 @@ button:focus {
       content: "";
       display: block;
       width: 5px;
-      height: 25px;
+      height: 32px;
+      // height: 25px;
       background-color: #ffffff;
-      top: 17px;
+      // top: -5px;
+      // right: 15px;
+      top: 15px;
       right: 30px;
       transform: rotate(45deg);
     }
@@ -100,9 +110,12 @@ button:focus {
       content: "";
       display: block;
       width: 5px;
-      height: 25px;
+      height: 32px;
+      // height: 25px;
       background-color: #ffffff;
-      top: 17px;
+      // top: -5px;
+      // right: 15px;
+      top: 15px;
       right: 30px;
       transform: rotate(-45deg);
     }
@@ -111,15 +124,21 @@ button:focus {
 .main-nav__toggle {
   font-size: 0;
 
+
 }
 .main-nav--closed
 .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 17px;
-  right: 20px;
+  bottom: 18px;
+  right: 0px;
   width: 23px;
   height: 4px;
+
+  // top: 17px;
+  // right: 20px;
+  // width: 23px;
+  // height: 4px;
   font-size: 0;
 
   background-color: @blue;
